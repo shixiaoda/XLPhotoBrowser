@@ -438,7 +438,7 @@
         default:
             break;
     }
-    CGFloat y = self.xl_height - size.height - 10;
+    CGFloat y = self.xl_height - size.height - 25;
     self.pageControl.frame = CGRectMake(x, y, size.width, size.height);
 }
 
@@ -837,7 +837,7 @@
     tempView.frame = CGRectMake( - zoomingScrollView.scrollview.contentOffset.x + zoomingScrollView.imageView.xl_x,  - zoomingScrollView.scrollview.contentOffset.y + zoomingScrollView.imageView.xl_y, zoomingScrollView.imageView.xl_width, zoomingScrollView.imageView.xl_height);
     [self addSubview:tempView];
     
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+//    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     [UIView animateWithDuration:XLPhotoBrowserHideImageAnimationDuration animations:^{
         tempView.frame = targetTemp;
         self.backgroundColor = [UIColor clearColor];
@@ -964,7 +964,7 @@
     self.alpha = 0.0;
     [self.photoBrowserWindow.rootViewController.view addSubview:self];
     [self.photoBrowserWindow makeKeyAndVisible];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     [self iniaialUI];
 }
 
@@ -973,7 +973,7 @@
  */
 - (void)dismiss
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+//    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     [UIView animateWithDuration:XLPhotoBrowserHideImageAnimationDuration animations:^{
         self.alpha = 0.0;
     } completion:^(BOOL finished) {
